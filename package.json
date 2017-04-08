@@ -1,0 +1,30 @@
+{
+  "name": "sails-generate-frontend-webpack-vue",
+  "version": "0.1.0",
+  "description": "Second pass generator for sails-generate-new-webpack-vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'See tests in the GitHub repo for Sails core."
+  },
+  "keywords": [
+    "frontend",
+    "generator",
+    "sails",
+    "generate",
+    "plugin",
+    "vue",
+    "webpack"
+  ],
+  "repository": "https://github.com/tarrask/sails-generate-frontend-webpack-vue",
+  "author": "Damien Plumettaz",
+  "license": "MIT",
+  "dependencies": {
+    "sails-generate-sails.io.js": "^0.14.0",
+    "vue-cli": "^2.8.1"
+  },
+  "sailsGenerator": {
+    "type": "frontend",
+    "behavior": "Implements `sails generate frontend`.",
+    "sailsVersion": "^0.12.8"
+  }
+}

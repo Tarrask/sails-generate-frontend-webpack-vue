@@ -1,6 +1,6 @@
 {
   "name": "sails-generate-frontend-webpack-vue",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Second pass generator for sails-generate-new-webpack-vue",
   "main": "index.js",
   "scripts": {

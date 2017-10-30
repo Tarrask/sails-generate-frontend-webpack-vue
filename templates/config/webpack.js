@@ -11,31 +11,30 @@ function requireIfExists(path, fallback) {
 }
 
 module.exports = {
-	webpack: {
-  /***************************************************************************
-   *                                                                         *
-   * The webpack compilation should finished before this timeout or sails.js *
-   * will not start                                                          *
-   *                                                                         *
-   ***************************************************************************/
-  // _hookTimeout: 60000,
+  webpack: {
+    /***************************************************************************
+     *                                                                         *
+     * The webpack compilation should finished before this timeout or sails.js *
+     * will not start                                                          *
+     *                                                                         *
+     ***************************************************************************/
+    // _hookTimeout: 60000,
 
-  /***************************************************************************
-   *                                                                         *
-   * A prefix to add to the hook logs                                        *
-   *                                                                         *
-   ***************************************************************************/
-  // logPrefix: 'sails-hook-webpack2:',
+    /***************************************************************************
+     *                                                                         *
+     * A prefix to add to the hook logs                                        *
+     *                                                                         *
+     ***************************************************************************/
+    // logPrefix: 'sails-hook-webpack2:',
 
-
-  /***************************************************************************
-   *                                                                         *
-   * Options passed to webpack                                               *
-   *                                                                         *
-   ***************************************************************************/
-		options: {
-			context: path.resolve(__dirname, '../webpack/'),
-		},
+    /***************************************************************************
+     *                                                                         *
+     * Options passed to webpack                                               *
+     *                                                                         *
+     ***************************************************************************/
+    options: {
+      context: path.resolve(__dirname, '../webpack/'),
+    },
 
     /***************************************************************************
      *                                                                         *
@@ -58,14 +57,13 @@ module.exports = {
       history: {}
     },
 
-
     /***************************************************************************
      *                                                                         *
      * This get merged with the webpack options by the hook when sails lift    *
      *                                                                         *
      ***************************************************************************/
-		production: require('../webpack/build/webpack.prod.conf.js'),
-		development: require('../webpack/build/webpack.dev.conf.js'),
+    production: require('../webpack/build/webpack.prod.conf.js'),
+    development: require('../webpack/build/webpack.dev.conf.js'),
     testing: requireIfExists('../webpack/build/webpack.test.conf.js')
-	}
+  }
 }
